@@ -1337,6 +1337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapPiecePrefab: {fileID: 184480, guid: 985d1cfd43d61774a85d741b92f3367f, type: 2}
+  mapPieceGoalPrefab: {fileID: 184480, guid: 73657251cf628b34eb93a20e11d4fa8f, type: 2}
   redBallPrefab: {fileID: 122154, guid: a2ba26efeaf89844c9fd5fffbf4367b3, type: 2}
   blueBallPrefab: {fileID: 171496, guid: d853c9f04e5e47f4da11800b0f1d824b, type: 2}
 --- !u!4 &955681724
