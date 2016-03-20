@@ -34,20 +34,7 @@ public class MovePlayer : MonoBehaviour
 	void OnTriggerEnter(Collider other)
 	{
 		Destroy(other.gameObject);
-	}
-
-	void OnCollisionEnter(Collision other)
-	{
-		StopCoroutine("MoveToOppositeDirection");
-		StartCoroutine("MoveToOppositeDirection");
-	}
-
-	IEnumerator MoveToOppositeDirection()
-	{
-		yield return new WaitForEndOfFrame();
-
-		transform.Rotate(0, 180, 0);
-	}
+	}	
 
 	public void PressLeftArrowDown()
 	{
