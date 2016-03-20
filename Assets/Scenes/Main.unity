@@ -2185,8 +2185,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1903319645}
-  - 114: {fileID: 1903319640}
-  - 95: {fileID: 1903319638}
   m_Layer: 8
   m_Name: AircraftJet
   m_TagString: Player
@@ -2194,53 +2192,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &1903319638
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 147d826ca4c5a834a9dfe5db390c47f4,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1903319636}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7d7008bf90b0d2f4c9fb16a2603655f6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &1903319640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400006, guid: 147d826ca4c5a834a9dfe5db390c47f4,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1903319636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66329fe4ad8cd59478fffdc10131da1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EngineSound: {fileID: 8300000, guid: 9db9336e9f17c9744847c5fe94c1650f, type: 3}
-  m_EngineMinThrottlePitch: 0.4
-  m_EngineMaxThrottlePitch: 2
-  m_EngineFwdSpeedMultiplier: 0.002
-  m_WindSound: {fileID: 8300000, guid: 38d4d0ff7855e984285fbf430385b2aa, type: 3}
-  m_WindBasePitch: 0.2
-  m_WindSpeedPitchFactor: 0.004
-  m_WindMaxSpeedVolume: 100
-  m_AdvancedSetttings:
-    engineMinDistance: 50
-    engineMaxDistance: 1000
-    engineDopplerLevel: 1
-    engineMasterVolume: 0.5
-    windMinDistance: 10
-    windMaxDistance: 100
-    windDopplerLevel: 1
-    windMasterVolume: 0.5
 --- !u!4 &1903319645
 Transform:
   m_ObjectHideFlags: 0

@@ -18,28 +18,51 @@ public class MovePlayer : MonoBehaviour
 	bool pressedLeftButton = false;
 	bool pressedRightButton = false;
 
+	int isOppositeDirection = 1;
+
 	void Start()
 	{
 		successImage.SetActive(false);
 	}
 
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.LeftArrow))
+		{
+			DetermindDirection();
+			pressedLeftButton = true;
+		}			
+
+		if (Input.GetKeyUp(KeyCode.LeftArrow))
+			pressedLeftButton = false;
+
+		if (Input.GetKeyDown(KeyCode.RightArrow))
+		{
+			DetermindDirection();
+			pressedRightButton = true;
+		}
+
+		if (Input.GetKeyUp(KeyCode.RightArrow))
+			pressedRightButton = false;
+	}
+
 	void FixedUpdate()
 	{
 		if (gameStarted == false)
-			return;
-
+			return;		
+		
 		float rotateValue = rotateSpeed * Time.fixedDeltaTime;
 		float moveValue = moveSpeed * Time.fixedDeltaTime;
 		
-		transform.position += transform.forward * moveValue;
+		transform.position += transform.forward * moveValue;		
 
-		if (Input.GetKey(KeyCode.LeftArrow) || pressedLeftButton)
-		{
-			transform.Rotate(0, -rotateValue, 0);
+		if (pressedLeftButton)
+		{			
+			transform.Rotate(0, -rotateValue * isOppositeDirection, 0);
 		}
-		else if (Input.GetKey(KeyCode.RightArrow) || pressedRightButton)
+		else if (pressedRightButton)
 		{
-			transform.Rotate(0, rotateValue, 0);
+			transform.Rotate(0, rotateValue * isOppositeDirection, 0);
 		}
 	}
 
@@ -61,6 +84,8 @@ public class MovePlayer : MonoBehaviour
 
 	public void PressLeftArrowDown()
 	{
+		DetermindDirection();
+
 		pressedLeftButton = true;
 	}
 
@@ -71,7 +96,13 @@ public class MovePlayer : MonoBehaviour
 
 	public void PressRightArrowDown()
 	{
+		DetermindDirection();
+
 		pressedRightButton = true;
+	}
+
+	void DetermindDirection()
+	{		
 	}
 
 	public void PressRightArrowUp()
