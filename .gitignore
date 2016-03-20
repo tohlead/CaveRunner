@@ -3,3 +3,4 @@
 *.csproj
 *.sln
 /.vs/CaveRunner/v14/*.suo
+Temp
