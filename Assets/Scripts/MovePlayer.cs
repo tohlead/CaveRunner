@@ -98,6 +98,13 @@ public class MovePlayer : MonoBehaviour
 	void OnTriggerEnter(Collider other)
 	{
 		Destroy(other.gameObject);
+
+		var newEatEffectBundle = BundleLoader.Load("Effects/EatBallEffect");
+		GameObject newEatEffectObj = GameObject.Instantiate(newEatEffectBundle) as GameObject;
+		BundleLoader.Unload("Effects/EatBallEffect");
+		
+		newEatEffectObj.transform.parent = transform;
+		newEatEffectObj.transform.localPosition = Vector3.zero;
 	}
 
 	void OnCollisionEnter(Collision other)
